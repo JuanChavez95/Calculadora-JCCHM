@@ -1,0 +1,442 @@
+/* ================================================================
+   PALETA Y VARIABLES — de style.css base
+   ================================================================ */
+:root {
+  --fondo:      #0d0f1a;
+  --superficie: #1c1e2e;
+  --borde:      #3a3f58;
+  --acento:     #00f5d4;
+  --acento2:    #9b5de5;
+  --texto:      #a0a5c0;
+  --btn-num:    #f2e9d9;
+  --btn-txt:    #4a3f35;
+  --pantalla:   #05060a;
+}
+
+body {
+  background: url(https://img.freepik.com/vector-gratis/remolinos-amarillos-abstractos_1409-9837.jpg?semt=ais_hybrid&w=740&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  color: var(--texto);
+}
+
+/* ================================================================
+   CARD — width fijo 330px, nunca cambia
+   ================================================================ */
+.calc-card {
+  background-color: #f65132;
+  border: 4px solid #FFFFFF;
+  border-radius: 28px;
+  padding: 25px;
+  width: 330px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+}
+
+.calc-header {
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  font-size: 0.85rem;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+/* ================================================================
+   PANTALLA
+   ================================================================ */
+.display-box {
+  background-image: url(https://wallpapers.com/images/hd/simpsons-aesthetic-q6849zl3z2h4kxo4.jpg);
+  background-size: cover;
+  background-position: bottom;
+  border: 4px solid #FFFFFF;
+  border-radius: 15px;
+  padding: 15px 15px 15px 20px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+#expresion {
+  font-size: 16px;
+  color: #eeeeee;
+  font-family: 'Arial Black', sans-serif;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.9);
+  min-height: 20px;
+  margin-bottom: 5px;
+}
+
+#pantalla {
+  font-size: 36px;
+  font-weight: bold;
+  color: #ffffff;
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+  word-wrap: break-word;
+}
+
+/* ================================================================
+   GRID — idéntico al base
+   ================================================================ */
+.grid-teclado {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* ================================================================
+   BOTONES
+   ================================================================ */
+.btn-calc {
+  height: 58px;
+  border: 2px solid #FFFFFF;
+  border-radius: 14px;
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 800;
+  transition: all 0.1s ease;
+  user-select: none;
+}
+
+.btn-calc img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: fill;
+}
+
+.btn-calc:hover  { filter: brightness(0.9); }
+.btn-calc:active { filter: brightness(0.7); transform: translateY(2px); }
+
+.btn-num {
+  background-color: #4268f7;
+  color: white;
+  box-shadow: 0 4px 0 #1e3acc;
+}
+.btn-num:active { transform: translateY(3px); box-shadow: 0 1px 0 #1e3acc; }
+
+.btn-op {
+  background-color: #4268f7;
+  color: white;
+  box-shadow: 0 4px 0 #1e3acc;
+}
+.btn-op:active { transform: translateY(3px); box-shadow: 0 1px 0 #1e3acc; }
+
+.btn-c {
+  background-color: #c0392b;
+  color: white;
+  box-shadow: 0 4px 0 #7b241c;
+}
+.btn-c:active { transform: translateY(3px); box-shadow: 0 1px 0 #7b241c; }
+
+.btn-igual {
+  background-color: #27ae60;
+  color: white;
+  font-size: 1.4rem;
+  box-shadow: 0 4px 0 #1e8449;
+}
+.btn-igual:active { transform: translateY(3px); box-shadow: 0 1px 0 #1e8449; }
+
+/* ================================================================
+   BOTONES ESPECIALES
+   ================================================================ */
+.btn-hexadecimal,
+.btn-octal,
+.btn-escapicua,
+.btn-factorial {
+  grid-column: span 4;
+  height: 44px;
+  font-size: 0.88rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+.btn-hexadecimal { background-color: #FF991C; color: white; box-shadow: 0 4px 0 #b36a0d; }
+.btn-hexadecimal:active { transform: translateY(3px); box-shadow: 0 1px 0 #b36a0d; }
+
+.btn-octal { background-color: #ED5252; color: white; box-shadow: 0 4px 0 #a33030; }
+.btn-octal:active { transform: translateY(3px); box-shadow: 0 1px 0 #a33030; }
+
+.btn-escapicua { background-color: #FF991C; color: white; box-shadow: 0 4px 0 #b36a0d; }
+.btn-escapicua:active { transform: translateY(3px); box-shadow: 0 1px 0 #b36a0d; }
+
+.btn-factorial { background-color: #ED5252; color: white; box-shadow: 0 4px 0 #a33030; }
+.btn-factorial:active { transform: translateY(3px); box-shadow: 0 1px 0 #a33030; }
+
+/* ================================================================
+   FOOTER
+   ================================================================ */
+.info-footer {
+  font-size: 0.7rem;
+  text-align: center;
+  margin-top: 15px;
+  color: rgba(255,255,255,0.6);
+}
+
+/* ================================================================
+   CARTA DE PRESENTACIÓN (dialog)
+   ================================================================ */
+.publicidad {
+  box-sizing: border-box;
+  width: 570px;
+  background: linear-gradient(160deg, #F64E26 0%, #F64E26 100%);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  border: 3px solid white;
+  border-radius: 16px;
+  z-index: 1000;
+  padding: 28px 28px 24px;
+  box-shadow: 0 0 40px rgba(255, 213, 33, 0.3);
+}
+
+.btn-cerrar {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: #e63946;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+}
+.btn-cerrar:hover { background: #c1121f; }
+
+.pub-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pub-titulo {
+  color: #FFD521;
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-align: center;
+  text-shadow: 0 0 8px rgba(255, 213, 33, 0.5);
+  margin: 0 0 4px;
+  letter-spacing: 2px;
+}
+
+.pub-subtitulo {
+  color: white;
+  font-size: 0.95rem;
+  margin: 0;
+  text-align: center;
+}
+.pub-subtitulo strong { 
+    font-weight: bold;
+    color: #FFD521;
+    text-shadow: 0px 0px 1px white;
+}
+
+.pub-tabla {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  margin-top: 4px;
+}
+
+.pub-cel-texto {
+  width: 40%;
+  vertical-align: middle;
+  padding: 8px 14px;
+  background: #F1C524;
+  border-radius: 10px 0 0 10px;
+  border-left: 3px solid white;
+  border-right: 3px solid white;
+}
+
+.pub-ep {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.4;
+}
+
+.pub-cel-video {
+  width: 60%;
+  padding: 6px 6px 6px 10px;
+  vertical-align: middle;
+  background: #F1C524;
+  border-radius: 0 10px 10px 0;
+  text-align: center;
+}
+
+.pub-cel-video iframe {
+  display: block;
+  border-radius: 8px;
+  width: 220px;
+  height: 124px;
+}
+/* ================================================================
+   ETIQUETAS LATERALES
+   ================================================================ */
+@keyframes brillo-etiqueta {
+  0%   { background-color: #107DC0; border-color: #107DC0; box-shadow: 0 0 8px #107DC0; }
+  50%  { background-color: #174E63; border-color: #174E63; box-shadow: 0 0 16px #174E63; }
+  100% { background-color: #107DC0; border-color: #107DC0; box-shadow: 0 0 8px #107DC0; }
+}
+
+.etiqueta {
+  box-sizing: border-box;
+  position: fixed;
+  width: 50px;
+  height: 80px;
+  top: 100px;
+  left: 0;
+  border: 2px solid #107DC0;
+  border-radius: 0px 15px 15px 0px;
+  outline: 2px solid #107DC0;
+  outline-offset: 3px;
+  padding: 10px 6px;
+  overflow: hidden;
+  cursor: pointer;
+  animation: brillo-etiqueta 2s ease-in-out infinite;
+  transition: width 0.4s ease, background-color 0.4s ease, box-shadow 0.4s ease;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.etiqueta:active,
+.etiqueta:focus-within {
+  width: 200px;
+  background-color: #174E63;
+  animation: none;
+  box-shadow: 0 0 20px #107DC0;
+}
+
+.etiqueta-normal {
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 900;
+  text-align: center;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  letter-spacing: 1px;
+  position: absolute;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.etiqueta:active .etiqueta-normal,
+.etiqueta:focus-within .etiqueta-normal {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.etiqueta-hover {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease 0s;
+  text-align: center;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.etiqueta:active .etiqueta-hover,
+.etiqueta:focus-within .etiqueta-hover {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.etiqueta-hover h4 {
+  color: #FFD521;
+  text-align: center;
+  text-shadow: 0px 0px 3px black;
+  font-size: 16px;
+  font-weight: bolder;
+  margin: 0 0 6px;
+}
+
+.etiqueta-hover h5 {
+  margin: 0;
+  text-align: center;
+}
+
+.etiqueta-hover h5 a {
+  color: whitesmoke;
+  text-shadow: 0px 0px 4px black;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.etiqueta--modificar { top: 210px; }
+.etiqueta--modificar:focus-within { position: fixed; top: 210px; left: 0; }
+/*Sección para las alertas del sistema*/
+#modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
+#modal-overlay.activo { display: flex; }
+
+#modal-box {
+  background: #174363;
+  border: 3px solid #FFD521;
+  border-radius: 16px;
+  padding: 24px;
+  width: 280px;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+}
+
+#modal-titulo {
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+#modal-mensaje {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+    word-break: break-all;
+    white-space: pre-line;
+}
+
+#modal-box button {
+  background: #FFD521;
+  color: #0d0f1a;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 28px;
+  font-size: 1rem;
+  font-weight: 900;
+  cursor: pointer;
+}
