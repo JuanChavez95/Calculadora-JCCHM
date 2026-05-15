@@ -13,19 +13,32 @@
   --pantalla:   #05060a;
 }
 
-body {
-  background: url(https://img.freepik.com/vector-gratis/remolinos-amarillos-abstractos_1409-9837.jpg?semt=ais_hybrid&w=740&q=80);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  font-family: 'Nunito', sans-serif;
-  color: var(--texto);
+body { 
+    min-height: 100vh; 
+    min-height: 100dvh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin: 0; 
+    font-family: 'Nunito', sans-serif; 
+    color: var(--texto); 
+    position: relative;
+} 
+
+/* Capa fija para la imagen original que elimina el desfase en móviles */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(imagenes/fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
 }
+
 
 /* ================================================================
    CARD — width fijo 330px, nunca cambia
